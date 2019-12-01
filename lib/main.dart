@@ -35,9 +35,20 @@ class MyHomePage extends StatelessWidget {
             appBar: AppBar(
                 title: Text(this.title),
             ),
-            body: Column(children: <Widget>[
+            body: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
                 Container(
                     child: Card(child: Text('Chart')),
+                ),
+                Card(
+                    child: Column(
+                        children: <Widget>[
+                            TextField(
+
+                            ),
+                        ],
+                    ),
                 ),
                 Column(
                     children: this.transactions.map((tx) {
