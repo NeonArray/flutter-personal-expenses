@@ -44,12 +44,33 @@ class MyHomePage extends StatelessWidget {
                     child: Card(child: Text('Chart')),
                 ),
                 Card(
-                    child: Column(
-                        children: <Widget>[
-                            TextField(
-
-                            ),
-                        ],
+                    elevation: 5,
+                    child: Container(
+                       padding: EdgeInsets.all(10),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: <Widget>[
+                                TextField(
+                                    decoration: InputDecoration(
+                                        labelText: 'Title',
+                                    ),
+                                    controller: this.titleController,
+                                ),
+                                TextField(
+                                    decoration: InputDecoration(
+                                        labelText: 'Amount',
+                                    ),
+                                    controller: this.amountController,
+                                ),
+                                FlatButton(
+                                    child: Text('Add Transaction'),
+                                    onPressed: () {
+                                        print(this.titleController.text);
+                                    },
+                                    textColor: Colors.purple,
+                                ),
+                            ],
+                        ),
                     ),
                 ),
                 Column(
