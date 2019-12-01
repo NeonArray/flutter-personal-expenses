@@ -67,16 +67,17 @@ class MyHomePage extends StatelessWidget {
                                             Text(
                                                 tx.title,
                                                 style: TextStyle(
-                                                    fontSize: 22,
+                                                    fontSize: 17,
                                                     fontWeight: FontWeight.normal,
                                                 )
                                             ),
                                             Text(
                                                 tx.date.toString(),
                                                 style: TextStyle(
-                                                    fontSize: 12,
+                                                    fontSize: 15,
                                                     fontWeight: FontWeight.w400,
                                                     fontStyle: FontStyle.italic,
+                                                    color: Colors.grey,
                                                 )
                                             ),
                                         ],
