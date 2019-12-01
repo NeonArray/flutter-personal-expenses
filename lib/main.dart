@@ -28,6 +28,8 @@ class MyHomePage extends StatelessWidget {
         Transaction(
             id: 't12', title: 'Something', amount: 23.33, date: DateTime.now()),
     ];
+    final titleController = TextEditingController();
+    final amountController = TextEditingController();
 
     @override
     Widget build(BuildContext context) {
