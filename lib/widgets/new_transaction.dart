@@ -21,18 +21,19 @@ class NewTransaction extends StatelessWidget {
                                 labelText: 'Title',
                             ),
                             controller: this.titleController,
+                            onSubmitted: (_) => this.submitData(),
                         ),
                         TextField(
                             decoration: InputDecoration(
                                 labelText: 'Amount',
                             ),
                             controller: this.amountController,
+                            onSubmitted: (_) => this.submitData(),
+                            keyboardType: TextInputType.numberWithOptions(decimal: true),
                         ),
                         FlatButton(
                             child: Text('Add Transaction'),
-                            onPressed: () {
-                                this.addTransactionCallback(this.titleController.text, double.parse(this.amountController.text));
-                            },
+                            onPressed: this.submitData,
                             textColor: Colors.purple,
                         ),
                     ],
