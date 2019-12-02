@@ -7,6 +7,17 @@ class NewTransaction extends StatelessWidget {
 
     NewTransaction(this.addTransactionCallback);
 
+    void submitData() {
+        final title = this.titleController.text;
+        final amount = double.parse(this.amountController.text);
+
+        if (title.isEmpty || amount <= 0) {
+            return;
+        }
+
+        this.addTransactionCallback(title, amount);
+    }
+
     @override
     Widget build(BuildContext context) {
         return Card(
