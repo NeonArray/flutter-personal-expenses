@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
-class NewTransaction extends StatelessWidget {
+class NewTransaction extends StatefulWidget {
     final addTransactionCallback;
-    final titleController = TextEditingController();
-    final amountController = TextEditingController();
 
     NewTransaction(this.addTransactionCallback);
+
+    @override
+    _NewTransactionState createState() => _NewTransactionState();
+}
+
+class _NewTransactionState extends State<NewTransaction> {
+    final titleController = TextEditingController();
+
+    final amountController = TextEditingController();
 
     void submitData() {
         final title = this.titleController.text;
