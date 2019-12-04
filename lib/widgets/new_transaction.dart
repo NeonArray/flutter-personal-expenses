@@ -22,7 +22,9 @@ class _NewTransactionState extends State<NewTransaction> {
             return;
         }
 
-        this.addTransactionCallback(title, amount);
+        this.widget.addTransactionCallback(title, amount);
+
+        Navigator.of(context).pop();
     }
 
     @override
